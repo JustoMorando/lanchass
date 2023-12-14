@@ -1,0 +1,16 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title id="logo">
+      <img src="https://us.123rf.com/450wm/alluranet/alluranet1711/alluranet171101541/89664024-logo-de-icono-de-lancha-rápida-en-diseño-plano.jpg" alt="Logo">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="logo">
+<section id="categorias-conteiner">
+  <a *ngFor="let item of categorias"
+    [ngStyle]="{'background-image': 'url('+item.imgUrl+')'}"
+    [routerLink]="['/categorias',item.nombre]">{{item.nombre}}
+  </a>
+</section>
+</ion-content>
